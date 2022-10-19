@@ -22,19 +22,39 @@ public class notAScript : MonoBehaviour
 
 
 
+    // f num 1
+    double playerSpeed = 0;
+    void SetSpeed(double Speed)
+    {
+        print(playerSpeed); /* print = 0 */
+        playerSpeed = Speed;
+        print(Speed);  /* print = 2.5 */
+    }
+
+    // f num 2
+     void CompareSpeed() 
+     {
+     if (HeroSpeed >= villainSpeed) {
+          print("fastest man life");
+     } else if (villainSpeed > HeroSpeed || HeroSpeed != villainSpeed) {
+          print("villains always on top");
+     } else if (HeroSpeed == villainSpeed) {
+          print("Hero Speed =" + HeroSpeed + "," + "villain Speed =" + villainSpeed);
+     } else {
+          print("None");
+     }
+
+     }   
+
     // Start is called before the first frame update
     void Start()
     {
-    
+
         // f num 1
-        double playerSpeed = 0;
-
-        void SetSpeed(double Speed)
-        {
-           playerSpeed = Speed;
-          SetSpeed(2.5);
-        }
-
+        SetSpeed(2.5);
+        
+        // f num 2
+        CompareSpeed();
 
         // if s1
         if (heroPowerLvl > villainPowerLvl)
@@ -49,35 +69,9 @@ public class notAScript : MonoBehaviour
         {
             print("they are playing rocket league i think");
         }
-        
-        // f num 2
-        void CompareSpeed() 
-        {
-           if (HeroSpeed >= villainSpeed) {
-              print("fastest man life");
-         } else if (villainSpeed > HeroSpeed || HeroSpeed != villainSpeed) {
-             print("villains always on top");
-         } else if (HeroSpeed == villainSpeed) {
-             print("Hero Speed =" + HeroSpeed + "," + "villain Speed =" + villainSpeed);
-          }
-        }   
 
 
     }
-
-    // f num 2
-    /*void CompareSpeed() 
-    {
-        if (HeroSpeed >= villainSpeed) {
-            print("fastest man life");
-        } else if (villainSpeed > HeroSpeed || HeroSpeed != villainSpeed) {
-            print("villains always on top");
-        } else if (HeroSpeed == villainSpeed) {
-            print("Hero Speed =" + HeroSpeed + "," + "villain Speed =" + villainSpeed);
-        }
-     CompareSpeed();
-    }
-    */
 
     // Update is called once per frame
     void Update()
